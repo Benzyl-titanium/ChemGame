@@ -1,6 +1,10 @@
 <template>
   <div class="my-5 w-full text-center">
-    <img alt="元素周期表" :src="periodicTableImage" class="max-w-full h-auto inline-block" />
+    <img
+      alt="元素周期表"
+      :src="periodicTableImage"
+      class="max-w-full h-auto inline-block dark:invert dark:brightness-90"
+    />
   </div>
 </template>
 

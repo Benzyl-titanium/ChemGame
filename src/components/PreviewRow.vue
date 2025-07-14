@@ -69,6 +69,10 @@ export default {
   margin: 2px;
   border-radius: 10px;
 }
+.dark .cell,
+.dark .titles-cell {
+  border-color: #fff !important;
+}
 
 @media screen and (max-width: 600px) {
   .cell {

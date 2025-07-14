@@ -1,6 +1,6 @@
 <template>
-  <div id="app" class="game-container">
-    <game-header />
+  <div :class="['game-container', { dark: isDark }]" id="app">
+    <game-header :is-dark="isDark" @toggle-dark="toggleDark" />
     <game-info />
     <game-controls
       :game-over="gameOver"
@@ -64,6 +64,7 @@ export default {
       message: '',
       messageTimeout: null,
       showHelpModal: false,
+      isDark: false,
     }
   },
   computed: {
@@ -277,6 +278,14 @@ export default {
     goToHelp() {
       this.showHelpModal = true
     },
+    toggleDark() {
+      this.isDark = !this.isDark
+      if (this.isDark) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    },
   },
   mounted() {
     // Use mounted() lifecycle hook
@@ -285,6 +294,11 @@ export default {
       return
     }
     this.randomGame()
+    // 初始化时根据 prefers-color-scheme 设置暗色
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      this.isDark = true
+      document.documentElement.classList.add('dark')
+    }
   },
 }
 </script>

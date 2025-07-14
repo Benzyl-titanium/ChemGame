@@ -109,3 +109,23 @@ export default {
   emits: ['close'], // Vue 2 doesn't strictly use emits declaration but good practice
 }
 </script>
+
+<style scoped>
+.bg-white {
+  background-color: #fff;
+}
+.dark .bg-white {
+  background-color: #23272f !important;
+  color: #f3f4f6 !important;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.7);
+}
+.dark .border-gray-200 {
+  border-color: #444 !important;
+}
+.dark .text-gray-400 {
+  color: #bbb !important;
+}
+.dark .hover\:text-gray-600:hover {
+  color: #fff !important;
+}
+</style>

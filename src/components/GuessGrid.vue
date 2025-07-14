@@ -98,6 +98,10 @@ export default {
   background-color: #d7d7d7;
   color: rgb(0, 0, 0);
 }
+.dark .cell,
+.dark .titles-cell {
+  border-color: #fff !important;
+}
 
 @media screen and (max-width: 600px) {
   .titles-cell {

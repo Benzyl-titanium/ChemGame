@@ -84,4 +84,12 @@ export default {
   width: 100%;
   margin-bottom: 5px;
 }
+.dark .input-row input {
+  background-color: #23272f !important;
+  color: #f3f4f6 !important;
+}
+.dark .input-row input::placeholder {
+  color: #cbd5e1 !important;
+  opacity: 1;
+}
 </style>
