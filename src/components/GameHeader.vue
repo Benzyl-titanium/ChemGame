@@ -11,7 +11,7 @@
         <i :class="['fa-solid', isDark ? 'fa-sun' : 'fa-moon', 'w-6', 'h-6']"></i>
       </button>
       <a
-        href="https://github.com/biantailab/chem-game"
+        href="https://github.com/Benzyl-titanium/ChemGame"
         target="_blank"
         rel="noopener noreferrer"
         class="github-link flex items-center p-0 m-0 mt-2 bg-transparent border-none shadow-none focus:outline-none"
